@@ -1,0 +1,59 @@
+2 elevators, same shaft
+expected load: 
+	light traffic
+	4 story apt complex
+	1 request per min peak time
+
+= authorize
+must authorize to use when not going to lobby
+no authorize when going to lobby
+access to 1 floor per authorization
+
+= request queuing
+simultaneous requests
+	when elevators enqueued
+	when no queue
+queued requests
+	wait time ** prevent long waits
+
+= request handling
+	n = current floor
+	m = requested floor
+	going up?
+		avail stops: n < m
+	going down?
+		avail stops: n > m
+
+event driven?
+	event: on a floor
+	action: check request queue
+	elevator triggers events
+	dispatcher handles events
+
+requests
+  1st floor going up
+  2nd floor going down
+
+dispatcher
+elevators
+
+dispatcher
+  request arrives
+  send an elevator
+
+elevator
+  respond to dispatch
+  wait
+  emit events
+
+request arrives
+  dispatcher logs req
+  dispatcher adds to queue
+  dispatcher listens for elevator events
+    searches queue for shortest path
+
+
+elevator
+  always on a floor
+  emits event on floor change, with directionality
+  directionality: up, down, static
