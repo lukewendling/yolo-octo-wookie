@@ -1,0 +1,25 @@
+{
+  "name": "elevator",
+  "version": "0.0.1",
+  "description": "An elevator programming exercise",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/nodeunit test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lukewendling/yolo-octo-wookie.git"
+  },
+  "keywords": [
+    "elevator"
+  ],
+  "author": "Luke Wendling <luke@lukewendling.com>",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "nodeunit": "~0.8.1"
+  }
+}
