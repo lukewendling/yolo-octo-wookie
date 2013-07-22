@@ -11,9 +11,17 @@ The program provides rudimentary console output to review elevator activity. Sta
 # terminal 1 (review request log here)
 node server
 
-# terminal 2
-node client
+# terminal 2 (node repl)
+var Dispatcher = require('./lib/dispatcher');
+dispatcher = new Dispatcher();
+dispatcher.receive({floor: 10}, {floor: 4}, {floor: 12})
 ```
+
+Class Design
+------------
+* Dispatcher: server instantiation, request handling
+* ElevatorBank: manages a queue of elevator requests and elevator states
+* Elevator: worker bee
 
 Objectives
 ----------
