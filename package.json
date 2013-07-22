@@ -2,7 +2,7 @@
   "name": "elevator",
   "version": "0.0.1",
   "description": "An elevator programming exercise",
-  "main": "app.js",
+  "main": "server.js",
   "directories": {
     "test": "test"
   },
@@ -20,6 +20,7 @@
   "license": "BSD",
   "readmeFilename": "README.md",
   "dependencies": {
-    "nodeunit": "~0.8.1"
+    "nodeunit": "~0.8.1",
+    "json-socket": "~0.1.2"
   }
 }
