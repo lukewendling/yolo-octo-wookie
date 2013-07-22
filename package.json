@@ -21,6 +21,7 @@
   "readmeFilename": "README.md",
   "dependencies": {
     "nodeunit": "~0.8.1",
-    "json-socket": "~0.1.2"
+    "json-socket": "~0.1.2",
+    "jsonfile": "~1.0.0"
   }
 }

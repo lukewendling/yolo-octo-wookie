@@ -1,6 +1,10 @@
 // Server
 var Dispatcher = require('./lib/dispatcher');
 
-dispatcher = new Dispatcher();
+var dispatcher = new Dispatcher();
+
+process.on('SIGINT', function() {
+  dispatcher.stop();
+});
 
 dispatcher.start();
