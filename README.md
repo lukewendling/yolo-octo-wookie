@@ -3,6 +3,17 @@ An Elevator Programming Exercise
 
 I set out to write a program to handle elevator requests - inspired by the seemingly sluggish elevators in my 4 story apartment complex.
 
+How to Review
+-------------
+I saved my scratchpad notes in txt files and committed at each step in the design and development process. Reviewing the order and cotent of each commit (esp. the first 3 days) should give you a good indication of my typical workflow and problem-solving steps.
+
+Install
+-------
+```
+git clone https://github.com/lukewendling/yolo-octo-wookie
+npm install
+```
+
 Usage
 -----
 The program provides rudimentary console output to review elevator activity. Start the server in one process (terminal) and then execute client requests:
