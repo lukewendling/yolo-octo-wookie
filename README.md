@@ -26,6 +26,7 @@ node server
 var Dispatcher = require('./lib/dispatcher');
 dispatcher = new Dispatcher();
 dispatcher.receive({floor: 10}, {floor: 4}, {floor: 12})
+# check server log to see the request handling
 ```
 
 Class Design
