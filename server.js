@@ -1,3 +1,5 @@
+'use strict';
+
 // Server
 var Dispatcher = require('./lib/dispatcher');
 
