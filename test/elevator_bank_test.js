@@ -3,7 +3,7 @@ var ElevatorBank = require('../lib/elevator_bank');
 exports.testInit = {
 
   setUp: function (callback) {
-    this.elevator_bank = new ElevatorBank();
+    this.elevator_bank = new ElevatorBank([{ "name": "e1", "floor": 12, "busy": false }]);
     callback();
   },
 
@@ -23,7 +23,7 @@ exports.testInit = {
 exports.testRequestProcessing = {
 
   setUp: function (callback) {
-    this.elevator_bank = new ElevatorBank();
+    this.elevator_bank = new ElevatorBank([{ "name": "e1", "floor": 12, "busy": false }]);
     callback();
   },
 

@@ -3,7 +3,8 @@ var Elevator = require('../lib/elevator');
 exports.testInit = {
 
   setUp: function (callback) {
-    this.elevator = new Elevator();
+    Elevator.prototype._move = function() {}; // stub
+    this.elevator = new Elevator({ "name": "e1", "floor": 12, "busy": false });
     callback();
   },
 
@@ -15,7 +16,8 @@ exports.testInit = {
 exports.testRequestProcessing = {
 
   setUp: function (callback) {
-    this.elevator = new Elevator();
+    Elevator.prototype._move = function() {}; // stub
+    this.elevator = new Elevator({ "name": "e1", "floor": 12, "busy": false });
     callback();
   },
 
