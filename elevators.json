@@ -2,17 +2,13 @@
   {
     "name": "e1",
     "floor": 12,
-    "domain": null,
-    "_events": {},
-    "_maxListeners": 10,
-    "busy": false
+    "busy": false,
+    "warmUp": true
   },
   {
     "name": "e2",
     "floor": 10,
-    "domain": null,
-    "_events": {},
-    "_maxListeners": 10,
-    "busy": false
+    "busy": false,
+    "warmUp": true
   }
 ]
