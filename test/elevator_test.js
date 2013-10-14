@@ -1,31 +1,39 @@
 var Elevator = require('../lib/elevator');
 
-exports.testInit = {
+exports.testConstructor = {
 
   setUp: function (callback) {
-    Elevator.prototype._move = function() {}; // stub
-    this.elevator = new Elevator({ "name": "e1", "floor": 12, "busy": false });
+    this.elevator = new Elevator({ name: "e1", floor: 12, warmUp: false });
     callback();
   },
 
-  'emits life events' : function (test) {
+  'sets properties' : function (test) {
+    test.equal(12, this.elevator.floor);
+    test.equal("e1", this.elevator.name);
+    test.equal(false, this.elevator.busy);
     test.done();
   }
 };
 
-exports.testRequestProcessing = {
+exports.testMoving = {
 
   setUp: function (callback) {
-    Elevator.prototype._move = function() {}; // stub
-    this.elevator = new Elevator({ "name": "e1", "floor": 12, "busy": false });
+    this.elevator = new Elevator({ name: "e1", floor: 12, warmUp: false });
     callback();
   },
 
-  'accepts request' : function (test) {
+  'busy when job starts' : function (test) {
+    this.elevator.busy = false;
+    this.elevator._run = function() {};
+    this.elevator._startMoving({floor: 10});
+    test.equal(true, this.elevator.busy);
     test.done();
   },
 
-  'completes request' : function (test) {
+  'not busy when job ends' : function (test) {
+    this.elevator.busy = true;
+    this.elevator._doneMoving({floor: 10});
+    test.equal(false, this.elevator.busy);
     test.done();
   }
 };
