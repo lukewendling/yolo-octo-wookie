@@ -48,3 +48,9 @@ Elevator programming is not trivial. I initially planned to build an optimizatio
 If your aim is for high throughput, you might be tempted to respond very quickly to the next closest request. For example, if the elevator is currently on floor 10, and 2 simultaneous requests come in, floor 1 and floor 12, you'll likely take the latter. In high-volume scenarios where most activity is between floors 10-15 (maybe lunch time in a large office building), when does floor 1 get serviced?
 
 In fact, just dealing with directionality at all is quite challenging. Managing the current state (floor num) and directionality (up/down) for all elevators, and pairing with incoming requests, in addition to queuing is a multi-faceted problem.
+
+Run Tests
+---------
+```
+npm test
+```
